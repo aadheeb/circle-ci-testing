@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  beagle-trigger:
+      docker:
+          - image: beaglesecurity/beagle-test-trigger-common:latest
+      steps:
+          - run:
+              command: trigger-test
+workflows:
+  beagle-circle-test:
+    jobs:
+      - beagle-trigger
