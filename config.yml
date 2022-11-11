@@ -6,3 +6,7 @@ jobs:
       steps:
           - run:
               command: trigger-test
+workflows:
+  beagle-circle-test:
+    jobs:
+      - beagle-trigger
